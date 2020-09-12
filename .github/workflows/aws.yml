@@ -47,3 +47,22 @@ jobs:
         echo "Pushing image to ECR..."
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+
+    - name: Setup kubeconfig
+      id: setup-kubeconfig
+      run: |
+        aws eks --region ap-south-1 update-kubeconfig --name first-eks
+    
+    - name: Deploy k8s yaml
+      id: deploy-k8s-yaml
+      env:
+        K8S_YAML_DIR: ./manifests 
+        IMAGE_NAME: ${{ steps.build-image.outputs.image }}
+      run: |
+        # Setup kustomize
+        cd $K8S_YAML_DIR
+        kubectl apply -f .    
+
+
+
+
