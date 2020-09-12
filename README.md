@@ -18,7 +18,11 @@ to see output on browser we need to expose port 8080 run the below command
   
   before starting we need some requirements
     1. AWS account
+    
+    
     2. create ECR repository 
+    
+    
     3.  store aws keys in secretes of github current repository under settings you can find secretes
  
  after this you can edit repository name and aws-region
@@ -55,7 +59,11 @@ to see output on browser we need to expose port 8080 run the below command
  now you can interact with your AWS EKS cluster from your PC
  
  once done execute below commands
+ 
+ 
  $ kubectl get svc
+ 
+ 
  $ kubectl describe svc python-svc                            #(your service name) 
  
  then copy external Ip and paste it in browser you can see the output
