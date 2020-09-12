@@ -59,7 +59,7 @@ jobs:
         K8S_YAML_DIR: ./manifests 
         IMAGE_NAME: ${{ steps.build-image.outputs.image }}
       run: |
-        # Setup kustomize
+        # changing directory and excuting kubectl commands
         cd $K8S_YAML_DIR
         kubectl apply -f .    
 
