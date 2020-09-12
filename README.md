@@ -54,6 +54,11 @@ to see output on browser we need to expose port 8080 run the below command
    > then make sure you updated the kube config file and having correct IAM permissions
  now you can interact with your AWS EKS cluster from your PC
  
+ once done execute below commands
+ $ kubectl get svc
+ $ kubectl describe svc python-svc                            #(your service name) 
+ 
+ then copy external Ip and paste it in browser you can see the output
    
    
  
