@@ -1,4 +1,4 @@
-# eksgitactions 234
+# eksgitactions
 
 1. <h3> Running this app in docker instructions</h3>
    
