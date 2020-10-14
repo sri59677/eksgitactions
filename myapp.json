@@ -1,0 +1,21 @@
+[
+  {
+    "name": "my-app",
+    "image": "487468996124.dkr.ecr.eu-west-2.amazonaws.com/my-node:ef819598db1112ada6367c77c967bfe128c7a508",
+    "essential": true,
+    "cpu": 0,
+    "memory": 128,
+    "links": [],
+    "portMappings": [
+      {
+        "containerPort": 8080,
+        "hostPort": 0,
+        "protocol": "tcp"
+      }
+    ],
+    "command": [],
+    "environment": []
+    
+    
+  }
+]
