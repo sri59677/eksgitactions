@@ -13,7 +13,7 @@ on:
   pull_request:
     branches: [ master ]
 
-name: python hostname Project `my-app-repo` CI on ECR
+name: ECS Project `my-app-repo` CI on ECR
 
 jobs:
   deploy:
